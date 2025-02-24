@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ hihi</title>
+    <link rel="stylesheet" href="totototest2.css">
+    <link rel="icon" href="dog.jpg" sizes="8x10">
+</head>
+
+<body>
+    <header>
+        <div class="top-nav">
+            <div class="menu-search">
+                <input type="text" placeholder="Tìm kiếm..." class="Search"></div>
+            <a href="dangnhap.html" class="nav-btn">Đăng nhập</a>
+            <a href="dangky.html" class="nav-btn">Đăng ký</a>
+            <a href="#" class="nav-btn">Quên mật khẩu</a>
+            <a href="thongtinthanhtoan.html" class="nav-btn">Giỏ Hàng</a>
+        </div>
+
+        <!-- Phần Slider -->
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="kich-thuoc-size-anh-chuan-cho-fanpage-facebook-la-.gif" alt="Banner 1" class="banner-img"></div>
+                <div class="slide"><img src="dien-may-xanh-quang-cao-tren-man-hình-led-ngoai-troi-tai-nha-trang-7.jpg" alt="" class="banner-img"></div>
+                <div class="slide"><img src="" alt="" class="banner-img"></div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </header>
+    
+    <div class="menutrangchu">
+        <nav>
+            <a href="tototo.html" class="nav-chu">Trang chủ</a>
+            <span>|</span>
+            <a href="gioithieu.html" class="nav-chu">Giới thiệu</a>
+            <span>|</span>
+            <a href="#" class="nav-chu">Liên hệ</a>
+            <span>|</span>
+            <a href="#" class="nav-chu">Hỏi đáp</a>
+        </nav>
+    </div>
+    
+    <div class="container">
+        <div class="menu-left">
+            <ul>
+                <li><a href="maytinh.html" target="main-content">Máy tính xách tay</a></li>
+                <li><a href="dienthoai.html" target="main-content">Điện thoại di động</a></li>
+                <li><a href="tivi.html" target="main-content">Tivi</a></li>
+                <li><a href="maychup.html" target="main-content">Máy chụp ảnh</a></li>
+            </ul>
+        </div>
+
+        <div class="content-right">
+            <iframe name="main-content" src="" style="width: 100%; min-height: 600px; border: 1px solid white; overflow: hidden;"></iframe>
+        </div>
+    </div>
+    
+    <footer>
+        Công ty cổ phần Điện Máy Xanh Bán Trả Góp. GPDKKD: 0903394744 do sở KH & ĐT TP.HCM cấp ngày 30/8/2024. Địa chỉ: 257/86/9 Tổ 16, Ấp 2, X.Đông Thạnh, H.Hóc Môn, Tp.HCM.
+        Điện thoại: 0903394744. Email: huynhkimtai101@gmail.com. MST: 0314009370
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+
+            slideIndex++;
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            }
+
+            slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+        }
+
+        function moveSlide(n) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+
+            slideIndex += n;
+            if (slideIndex < 0) {
+                slideIndex = totalSlides - 1;
+            } else if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            }
+
+            slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+        }
+
+        // Tự động chuyển slide mỗi 5 giây
+        setInterval(showSlides, 5000);
+    </script>
+</body>
+</html>

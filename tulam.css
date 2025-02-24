@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   .container{
+       width: 80%;
+       margin: 0 auto;
+   }
+   .sanpham{
+        border: 1px solid gray;
+        border-radius: 10px;
+        padding: 5px;
+        width: calc(25% - 10px);
+        margin:5px ;
+        float: left;
+        text-align: center;
+        background-color: aqua;
+        overflow: hidden;
+   }
+   .sanpham img{
+       width: 90%;
+       height: 200px;
+       object-fit: cover ;
+       margin: 10px 0;
+       transition: transform 0.3s ease;
+   }
+   .sanpham:hover img{
+       transform: scale(1.2);
+   }
+   .giasp{
+       color: red;
+       font-size: larger;
+   }
+   .tensp{
+       color: blue;
+       font-variant: small-caps;
+   }
+   del{
+       color: gray;
+       margin-right: 5px;
+   }

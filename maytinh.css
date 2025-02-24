@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.sanpham {
+    width: calc(25% - 10px);
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.sanpham img {
+    max-width: 100%;
+    height: auto;
+}
+.sanpham:hover img{
+    transform: scale(1.1);
+}
+.tensp {
+    color: blue;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.giasp {
+    color: orange;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.ten-sp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: green;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.icons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.icon {
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+}
